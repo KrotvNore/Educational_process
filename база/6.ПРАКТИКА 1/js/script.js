@@ -2,23 +2,24 @@
 
 let numberOfFilms = prompt('Сколько фильмов вы уже посмотрели?', '');
 
-let personalMovieDB = {
-   count: numberOfFilms,
+const personalMovieDB = {
+   count: +numberOfFilms,
    movies: {},
    actors: {},
    genres: [],
    privat: false
 }
 
-let firstAsk = prompt('Один из последних просмотренных фильмов?', '');
-let secondAsk = prompt('На сколько оцените его?', '');
-let first2Ask = prompt('Один из последних просмотренных фильмов?', '');
-let second2Ask = prompt('На сколько оцените его?', '');
+const firstAsk = prompt('Один из последних просмотренных фильмов?', ''),
+      secondAsk = prompt('На сколько оцените его?', ''),
+      first2Ask = prompt('Один из последних просмотренных фильмов?', ''),
+      second2Ask = prompt('На сколько оцените его?', '');
 
 personalMovieDB.movies = {
    [firstAsk]: secondAsk,
-   [first2Ask]: second2Ask,
+   [first2Ask]: second2Ask
 }
 
 console.log(personalMovieDB.count);
 console.log(personalMovieDB.movies);
+console.log(personalMovieDB);
